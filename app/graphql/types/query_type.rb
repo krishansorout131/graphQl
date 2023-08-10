@@ -16,7 +16,7 @@ module Types
 
     field :users, [Types::UserType], null: false
     def users
-      User.all.includes(:movies)
+      User.all.includes(movies: {comments: :user})
     end
     field :fetch_users, resolver: Queries::FetchUsers
     # Here we are only defined the field/methods and the implementaion of the methods is present in separtae files

@@ -22,6 +22,8 @@ module Types
     field :create_comments_on_movies, mutation: Mutations::CreateCommentsOnMovies
 
     field :delete_movie, mutation: Mutations::DeleteMovie
+
+    field :edit_user_movies, mutation: Mutations::EditUserMovies
     
   end
 end
