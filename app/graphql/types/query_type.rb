@@ -14,12 +14,10 @@ module Types
       "Hello World!"
     end
 
-    # field :users, [Types::UserType], null: false
-    # def users
-    #   users = User.all.includes(:movies)
-    #   message = "all users"
-    #   { message: message, users: users }
-    # end
+    field :users, [Types::UserType], null: false
+    def users
+      User.all.includes(:movies)
+    end
     field :fetch_users, resolver: Queries::FetchUsers
     # Here we are only defined the field/methods and the implementaion of the methods is present in separtae files
 
