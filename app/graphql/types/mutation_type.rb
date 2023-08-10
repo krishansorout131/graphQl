@@ -24,6 +24,8 @@ module Types
     field :delete_movie, mutation: Mutations::DeleteMovie
 
     field :edit_user_movies, mutation: Mutations::EditUserMovies
+
+    field :delete_user_movies, mutation: Mutations::DeleteUserMovies
     
   end
 end
