@@ -19,6 +19,7 @@ module Types
 
     field :create_user_movies_comments, mutation: Mutations::CreateUserMoviesComments
 
+    field :create_comments_on_movies, mutation: Mutations::CreateCommentsOnMovies
     
   end
 end

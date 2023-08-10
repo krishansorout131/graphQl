@@ -32,5 +32,9 @@ module Types
       User.find_by(id: id)
     end
     
+    field :all_movies, [Types::MovieType], null: true
+    def all_movies
+      Movie.all.includes(:comments)
+    end
   end
 end
