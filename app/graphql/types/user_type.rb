@@ -8,6 +8,7 @@ module Types
     field :email, String
     field :first_name, String
     field :last_name, String
+    field :full_name, String
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :movies_count, Integer, null: true
@@ -25,6 +26,10 @@ module Types
 
     def testing(id:, name:)
       "#{id} is the #{name}"
+    end
+
+    def full_name
+      [object.first_name&.strip, object.last_name&.strip].compact.join(" ")
     end
   end
 end
